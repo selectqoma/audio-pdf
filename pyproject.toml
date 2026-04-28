@@ -5,13 +5,18 @@ description = "Audio dictation -> formatted architect's etat des lieux (DOCX)"
 requires-python = ">=3.11"
 dependencies = [
     "anthropic>=0.40.0",
+    "fastapi>=0.115.0",
     "openai>=1.40.0",
     "python-docx>=1.1.0",
     "python-dotenv>=1.0.0",
+    "python-multipart>=0.0.12",
+    "requests>=2.32.0",
+    "uvicorn[standard]>=0.30.0",
 ]
 
 [project.scripts]
 etat-des-lieux = "etat_des_lieux.__main__:main"
+etat-des-lieux-web = "etat_des_lieux.web:main"
 
 [build-system]
 requires = ["hatchling"]

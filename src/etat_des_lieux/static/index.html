@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Voice to Doc AI</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Voice to Doc AI home">
+        <span>Voice to Doc AI</span>
+      </a>
+      <nav>
+        <a href="#workflow">Workflow</a>
+        <a href="#quality">Quality</a>
+        <a href="#demo">Demo</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">For expert-led reporting teams</p>
+          <h1>Turn field recordings into client-ready documents.</h1>
+          <p class="lead">
+            We use agentic AI to automate slow manual drafting work, from an expert's spoken
+            walkthrough to the structured document your team sends to the client.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-action" href="#demo">Try the workflow</a>
+            <a class="secondary-action" href="#workflow">See how it works</a>
+          </div>
+        </div>
+
+        <aside class="process-visual" aria-label="Automated workflow preview">
+          <div class="visual-header">
+            <span class="live-dot"></span>
+            <span>Voice-to-document workflow</span>
+          </div>
+          <ol class="pipeline-preview">
+            <li>
+              <span>01</span>
+              <strong>Expert records naturally</strong>
+              <small>Voice notes, walkthroughs and site context</small>
+            </li>
+            <li>
+              <span>02</span>
+              <strong>AI transcribes and structures</strong>
+              <small>Sections, observations, findings and actions</small>
+            </li>
+            <li>
+              <span>03</span>
+              <strong>Quality agent checks the draft</strong>
+              <small>Completeness, consistency, missing details</small>
+            </li>
+            <li>
+              <span>04</span>
+              <strong>Client document is ready</strong>
+              <small>Formatted DOCX for client delivery</small>
+            </li>
+          </ol>
+        </aside>
+      </section>
+
+      <section id="workflow" class="content-band">
+        <div class="section-heading">
+          <p class="eyebrow">Workflow</p>
+          <h2>No more manual report drafting after every field visit.</h2>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <span class="feature-number">1</span>
+            <h3>Record naturally</h3>
+            <p>The expert speaks during the visit, without changing the field workflow.</p>
+          </article>
+          <article>
+            <span class="feature-number">2</span>
+            <h3>Agentic processing</h3>
+            <p>Specialized AI steps parse, clean, organize, evaluate and revise the report.</p>
+          </article>
+          <article>
+            <span class="feature-number">3</span>
+            <h3>Client-ready output</h3>
+            <p>The final document follows your expected structure and can be reviewed before sending.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="quality" class="proof-section">
+        <div>
+          <p class="eyebrow">Quality</p>
+          <h2>Automation without accepting quality loss.</h2>
+          <p>
+            The workflow is not a single transcription pass. It separates transcription, editing,
+            judgment and revision, so the generated report is checked against the original recording
+            before the document is produced.
+          </p>
+        </div>
+        <div class="proof-list">
+          <div>
+            <strong>Traceable input</strong>
+            <span>Every draft starts from the expert's real recording.</span>
+          </div>
+          <div>
+            <strong>Structured review</strong>
+            <span>An evaluation pass looks for omissions, contradictions and weak sections.</span>
+          </div>
+          <div>
+            <strong>Human approval</strong>
+            <span>Your team keeps final control before the report goes to the client.</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="demo" class="demo-section" aria-live="polite">
+        <div class="section-heading">
+          <p class="eyebrow">Live demo</p>
+          <h2>Upload a recording and watch the document pipeline run.</h2>
+        </div>
+
+        <div class="demo-layout">
+          <form id="upload-form" class="dropzone">
+            <input id="audio-input" name="audio" type="file" accept="audio/*,video/*" />
+            <div class="drop-copy">
+              <strong>Drop an audio file</strong>
+              <span>Parsing, cleaning, evaluating and document generation happen automatically.</span>
+            </div>
+            <button id="submit-button" type="submit" hidden>Start parsing</button>
+          </form>
+
+          <section class="status-panel" data-state="idle">
+            <div class="status-topline">
+              <span id="stage-label">Waiting for audio</span>
+              <span id="percent-label">0%</span>
+            </div>
+            <div class="progress-track">
+              <div id="progress-bar" class="progress-bar"></div>
+            </div>
+            <p id="status-message">Upload a walkthrough recording to begin.</p>
+            <div class="pulse-row" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <a id="download-link" class="download-link" href="#" hidden>Download DOCX</a>
+          </section>
+        </div>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
