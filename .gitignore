@@ -1,0 +1,19 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+
+# Local artifacts
+samples/*
+!samples/.gitkeep
+references/*
+!references/.gitkeep
+templates/*
+!templates/.gitkeep
+out/
+*.docx
+!templates/*.docx
