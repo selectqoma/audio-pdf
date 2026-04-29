@@ -1,6 +1,14 @@
 {
   "rewrites": [
     {
+      "source": "/styles.css",
+      "destination": "/src/etat_des_lieux/static/styles.css"
+    },
+    {
+      "source": "/app.js",
+      "destination": "/src/etat_des_lieux/static/app.js"
+    },
+    {
       "source": "/static/(.*)",
       "destination": "/src/etat_des_lieux/static/$1"
     },
