@@ -9,6 +9,10 @@
       "destination": "/src/etat_des_lieux/static/app.js"
     },
     {
+      "source": "/voice2doc_logo_transparent.png",
+      "destination": "/src/etat_des_lieux/static/voice2doc_logo_transparent.png"
+    },
+    {
       "source": "/static/(.*)",
       "destination": "/src/etat_des_lieux/static/$1"
     },
