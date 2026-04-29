@@ -65,16 +65,13 @@ nav,
 
 .brand {
   gap: 10px;
-  font-size: 17px;
-  font-weight: 850;
   text-decoration: none;
 }
 
-.brand span {
-  color: transparent;
-  background: linear-gradient(90deg, var(--green), var(--blue), var(--red));
-  background-clip: text;
-  -webkit-background-clip: text;
+.brand img {
+  display: block;
+  width: clamp(150px, 18vw, 228px);
+  height: auto;
 }
 
 nav {
