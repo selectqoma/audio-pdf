@@ -1,4 +1,6 @@
 .env
+.env.local
+.deploy.env
 __pycache__/
 *.pyc
 .venv/
@@ -17,3 +19,4 @@ templates/*
 out/
 *.docx
 !templates/*.docx
+.vercel

@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/static/(.*)",
+      "destination": "/src/etat_des_lieux/static/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/src/etat_des_lieux/static/index.html"
+    }
+  ]
+}
