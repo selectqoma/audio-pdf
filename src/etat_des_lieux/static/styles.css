@@ -4,9 +4,9 @@
   --muted: #69727d;
   --soft: #f5f1ea;
   --panel: #ffffff;
-  --line: #d9d2c7;
-  --green: #12695f;
-  --green-soft: #dfeeea;
+  --line: #d4d9df;
+  --green: #245a87;
+  --green-soft: #e6eef6;
   --red: #b74732;
   --blue: #245a87;
   --gold: #d49a2f;
@@ -50,7 +50,7 @@ a {
   justify-content: space-between;
   gap: 24px;
   padding: 18px clamp(20px, 5vw, 64px);
-  border-bottom: 1px solid rgba(217, 210, 199, 0.8);
+  border-bottom: 1px solid rgba(212, 217, 223, 0.82);
   background: rgba(245, 241, 234, 0.88);
   backdrop-filter: blur(18px);
 }
@@ -238,7 +238,7 @@ small {
   height: 10px;
   border-radius: 50%;
   background: var(--green);
-  box-shadow: 0 0 0 6px rgba(18, 105, 95, 0.14);
+  box-shadow: 0 0 0 6px rgba(36, 90, 135, 0.15);
 }
 
 .pipeline-preview {
@@ -378,7 +378,7 @@ small {
 }
 
 .accent-card {
-  border-color: rgba(18, 105, 95, 0.34);
+  border-color: rgba(36, 90, 135, 0.34);
   background: var(--green-soft);
 }
 
