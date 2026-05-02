@@ -288,7 +288,8 @@ li {
 }
 
 .audio-visual,
-.extract-visual {
+.extract-visual,
+.template-visual {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -392,96 +393,47 @@ li {
   font-weight: 900;
 }
 
-.icon {
-  position: relative;
-  display: block;
-  width: 28px;
-  height: 28px;
+.template-visual {
+  width: 44px;
+  height: 34px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 3px;
+  padding: 6px;
   border: 2px solid var(--blue);
-  border-radius: 8px;
+  border-radius: 7px;
+  background: #ffffff;
 }
 
-.icon.microphone {
-  width: 30px;
-  height: 32px;
-  border-radius: 4px;
-}
-
-.icon.microphone::before,
-.icon.microphone::after {
-  content: "";
-  position: absolute;
-}
-
-.icon.microphone::before {
-  right: -2px;
-  top: -2px;
-  width: 10px;
-  height: 10px;
-  border-left: 2px solid var(--blue);
-  border-bottom: 2px solid var(--blue);
-  background: #f8fafc;
-}
-
-.icon.microphone::after {
-  left: 6px;
-  right: 6px;
-  top: 12px;
-  height: 8px;
-  border-top: 3px solid var(--blue);
-  border-bottom: 3px solid var(--blue);
-}
-
-.icon.extract {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-}
-
-.icon.extract::before,
-.icon.extract::after {
-  content: "";
-  position: absolute;
+.template-title,
+.template-row,
+.template-field {
+  display: block;
+  height: 3px;
+  border-radius: 999px;
   background: var(--blue);
 }
 
-.icon.extract::before {
-  left: 7px;
-  top: 8px;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  box-shadow: 0 6px 0 var(--blue), 0 12px 0 var(--blue);
+.template-title {
+  width: 18px;
 }
 
-.icon.extract::after {
-  left: 14px;
-  top: 9px;
-  width: 10px;
-  height: 2px;
-  box-shadow: 0 6px 0 var(--blue), 0 12px 0 var(--blue);
+.template-row {
+  width: 28px;
+  opacity: 0.58;
 }
 
-.icon.document {
-  border-radius: 4px;
+.template-row.short {
+  width: 20px;
 }
 
-.icon.document::before,
-.icon.document::after {
-  content: "";
-  position: absolute;
-  left: 6px;
-  right: 6px;
-  height: 2px;
-  background: var(--blue);
-}
-
-.icon.document::before {
-  top: 9px;
-}
-
-.icon.document::after {
-  top: 16px;
+.template-field {
+  width: 16px;
+  height: 7px;
+  margin-top: 1px;
+  border: 2px solid var(--blue);
+  background: transparent;
+  opacity: 0.8;
 }
 
 .report-preview {
