@@ -3,18 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Voice to Doc AI</title>
+    <title>ConstatFlow</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="topbar">
-      <a class="brand" href="#top" aria-label="Voice to Doc AI home">
-        <img src="voice2doc_logo_transparent.png" alt="Voice2Doc AI" />
+      <a class="brand" href="#top" aria-label="ConstatFlow home">
+        <span class="brand-mark">CF</span>
+        <span class="brand-name">ConstatFlow</span>
       </a>
-      <nav>
+      <nav aria-label="Primary navigation">
         <a href="#workflow" data-i18n="nav.workflow">Workflow</a>
-        <a href="#quality" data-i18n="nav.quality">Quality</a>
+        <a href="#review" data-i18n="nav.review">Review</a>
         <a href="#pilot" data-i18n="nav.pilot">Pilot</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
       </nav>
       <div class="language-switcher" aria-label="Language">
         <button type="button" data-lang="en">EN</button>
@@ -26,122 +28,249 @@
     <main id="top">
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow" data-i18n="hero.eyebrow">For expert-led reporting teams</p>
-          <h1 data-i18n="hero.title">Turn field recordings into client-ready documents.</h1>
+          <p class="eyebrow" data-i18n="hero.eyebrow">For property inspection report teams</p>
+          <h1 data-i18n="hero.title">Generate états des lieux reports from inspection recordings</h1>
           <p class="lead" data-i18n="hero.lead">
-            We use agentic AI to automate slow manual drafting work, from an expert's spoken
-            walkthrough to the structured document your team sends to the client.
+            Upload an expert's MP3 recording and receive a structured draft report in your firm's
+            own template, with uncertain items highlighted for review.
           </p>
           <div class="hero-actions">
-            <a class="primary-action" href="#pilot" data-i18n="hero.primary">Send a sample</a>
+            <a class="primary-action" href="#pilot" data-i18n="hero.primary">Test with one anonymized inspection</a>
             <a class="secondary-action" href="#workflow" data-i18n="hero.secondary">See how it works</a>
           </div>
         </div>
 
-        <aside class="process-visual" data-i18n-attr="aria-label:visual.aria" aria-label="Automated workflow preview">
-          <div class="visual-header">
-            <span class="live-dot"></span>
-            <span data-i18n="visual.title">Voice-to-document workflow</span>
+        <aside class="hero-panel" data-i18n-attr="aria-label:visual.aria" aria-label="ConstatFlow report workflow preview">
+          <div class="flow-strip">
+            <div class="flow-step">
+              <span class="icon microphone"></span>
+              <strong data-i18n="visual.step1">MP3 recording</strong>
+            </div>
+            <span class="flow-arrow">-></span>
+            <div class="flow-step">
+              <span class="icon extract"></span>
+              <strong data-i18n="visual.step2">AI extraction</strong>
+            </div>
+            <span class="flow-arrow">-></span>
+            <div class="flow-step">
+              <span class="icon document"></span>
+              <strong data-i18n="visual.step3">Report template</strong>
+            </div>
           </div>
-          <ol class="pipeline-preview">
-            <li>
-              <span>01</span>
-              <strong data-i18n="visual.step1.title">Expert records naturally</strong>
-              <small data-i18n="visual.step1.text">Voice notes, walkthroughs and site context</small>
-            </li>
-            <li>
-              <span>02</span>
-              <strong data-i18n="visual.step2.title">AI transcribes and structures</strong>
-              <small data-i18n="visual.step2.text">Sections, observations, findings and actions</small>
-            </li>
-            <li>
-              <span>03</span>
-              <strong data-i18n="visual.step3.title">Quality agent checks the draft</strong>
-              <small data-i18n="visual.step3.text">Completeness, consistency, missing details</small>
-            </li>
-            <li>
-              <span>04</span>
-              <strong data-i18n="visual.step4.title">Client document is ready</strong>
-              <small data-i18n="visual.step4.text">Formatted DOCX for client delivery</small>
-            </li>
-          </ol>
+
+          <div class="report-preview">
+            <div class="report-toolbar">
+              <span data-i18n="visual.reportTitle">État des lieux - draft</span>
+              <span class="status-pill" data-i18n="visual.status">4 items flagged</span>
+            </div>
+            <div class="report-page">
+              <div class="report-line wide"></div>
+              <div class="report-line medium"></div>
+              <div class="room-block">
+                <div>
+                  <strong data-i18n="visual.room">Kitchen</strong>
+                  <p data-i18n="visual.roomText">Wall near sink: humidity trace, paint blistering, verify extent.</p>
+                </div>
+                <span class="flag" data-i18n="visual.flag">Review</span>
+              </div>
+              <div class="room-block approved">
+                <div>
+                  <strong data-i18n="visual.room2">Living room</strong>
+                  <p data-i18n="visual.room2Text">Floor and skirting boards documented with standard phrasing.</p>
+                </div>
+                <span class="check" data-i18n="visual.check">OK</span>
+              </div>
+              <div class="export-row">
+                <span data-i18n="visual.export">Export: Word / PDF</span>
+              </div>
+            </div>
+          </div>
         </aside>
+      </section>
+
+      <section class="content-band pain-section">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="pain.eyebrow">The bottleneck</p>
+          <h2 data-i18n="pain.title">Report production should not depend on manual retyping</h2>
+          <p data-i18n="pain.copy">
+            Many firms still produce états des lieux by recording observations on-site, then sending
+            the audio to an internal admin team, freelancer, or offshore provider to create the final
+            report. This creates delays, corrections, inconsistent wording, and dependency on external availability.
+          </p>
+        </div>
+        <div class="bullet-grid">
+          <div data-i18n="pain.item1">MP3 recordings manually converted into reports</div>
+          <div data-i18n="pain.item2">Long turnaround between inspection and final document</div>
+          <div data-i18n="pain.item3">Repetitive formatting and copy-paste work</div>
+          <div data-i18n="pain.item4">Corrections caused by misunderstood audio</div>
+          <div data-i18n="pain.item5">Difficulty scaling during busy periods</div>
+        </div>
+      </section>
+
+      <section class="split-section solution-section">
+        <div>
+          <p class="eyebrow" data-i18n="solution.eyebrow">Structured generation</p>
+          <h2 data-i18n="solution.title">Turn recordings into structured reports automatically</h2>
+          <p data-i18n="solution.copy">
+            ConstatFlow transcribes the inspection recording, detects rooms and observations, extracts
+            damages and remarks, and generates a report in your existing Word template.
+          </p>
+        </div>
+        <div class="feature-list">
+          <div data-i18n="solution.item1">Room-by-room structure</div>
+          <div data-i18n="solution.item2">Damage and condition extraction</div>
+          <div data-i18n="solution.item3">Firm-specific phrasing and templates</div>
+          <div data-i18n="solution.item4">Editable Word/PDF export</div>
+          <div data-i18n="solution.item5">Source traceability to transcript/audio</div>
+          <div data-i18n="solution.item6">Human validation before final delivery</div>
+        </div>
+      </section>
+
+      <section id="review" class="review-section">
+        <div class="review-copy">
+          <p class="eyebrow" data-i18n="review.eyebrow">Exception-based review</p>
+          <h2 data-i18n="review.title">Review the exceptions, not the whole report</h2>
+          <p data-i18n="review.copy">
+            The goal is not to force your team to reread every line. ConstatFlow highlights uncertain
+            or risky items, such as unclear audio, ambiguous damage descriptions, missing information,
+            low-confidence sections, or unusual observations.
+          </p>
+        </div>
+        <div class="flag-panel">
+          <div class="flag-item warning">
+            <strong data-i18n="review.flag1.title">Unclear damage description</strong>
+            <span data-i18n="review.flag1.text">Jump to transcript/audio at 12:48</span>
+          </div>
+          <div class="flag-item warning">
+            <strong data-i18n="review.flag2.title">Missing required field</strong>
+            <span data-i18n="review.flag2.text">Ceiling condition not confirmed</span>
+          </div>
+          <div class="flag-item approved">
+            <strong data-i18n="review.flag3.title">Standard clause approved</strong>
+            <span data-i18n="review.flag3.text">Reusable wording applied from your template</span>
+          </div>
+        </div>
+        <div class="bullet-grid compact">
+          <div data-i18n="review.item1">Low-confidence passages flagged automatically</div>
+          <div data-i18n="review.item2">Unclear damages marked for verification</div>
+          <div data-i18n="review.item3">Missing required fields highlighted</div>
+          <div data-i18n="review.item4">Each flagged item links back to the source transcript/audio</div>
+          <div data-i18n="review.item5">Reviewed items can be approved quickly</div>
+        </div>
       </section>
 
       <section id="workflow" class="content-band">
         <div class="section-heading">
           <p class="eyebrow" data-i18n="workflow.eyebrow">Workflow</p>
-          <h2 data-i18n="workflow.title">No more manual report drafting after every field visit.</h2>
+          <h2 data-i18n="workflow.title">How it works</h2>
         </div>
-        <div class="feature-grid">
-          <article>
-            <span class="feature-number">1</span>
-            <h3 data-i18n="workflow.card1.title">Record naturally</h3>
-            <p data-i18n="workflow.card1.text">The expert speaks during the visit, without changing the field workflow.</p>
-          </article>
-          <article>
-            <span class="feature-number">2</span>
-            <h3 data-i18n="workflow.card2.title">Agentic processing</h3>
-            <p data-i18n="workflow.card2.text">Specialized AI steps parse, clean, organize, evaluate and revise the report.</p>
-          </article>
-          <article>
-            <span class="feature-number">3</span>
-            <h3 data-i18n="workflow.card3.title">Client-ready output</h3>
-            <p data-i18n="workflow.card3.text">The final document follows your expected structure and can be reviewed before sending.</p>
-          </article>
-        </div>
+        <ol class="workflow-list">
+          <li><span>1</span><strong data-i18n="workflow.step1">Upload the MP3 recording</strong></li>
+          <li><span>2</span><strong data-i18n="workflow.step2">Select the inspection type and template</strong></li>
+          <li><span>3</span><strong data-i18n="workflow.step3">ConstatFlow extracts rooms, components, damages, and remarks</strong></li>
+          <li><span>4</span><strong data-i18n="workflow.step4">The report is generated in your format</strong></li>
+          <li><span>5</span><strong data-i18n="workflow.step5">Only uncertain items are flagged for review</strong></li>
+          <li><span>6</span><strong data-i18n="workflow.step6">Export the final report to Word or PDF</strong></li>
+        </ol>
       </section>
 
-      <section id="quality" class="proof-section">
+      <section class="split-section template-section">
         <div>
-          <p class="eyebrow" data-i18n="quality.eyebrow">Quality</p>
-          <h2 data-i18n="quality.title">Automation without accepting quality loss.</h2>
-          <p data-i18n="quality.text">
-            The workflow is not a single transcription pass. It separates transcription, editing,
-            judgment and revision, so the generated report is checked against the original recording
-            before the document is produced.
+          <p class="eyebrow" data-i18n="template.eyebrow">Template adaptation</p>
+          <h2 data-i18n="template.title">Keep your existing report format</h2>
+          <p data-i18n="template.copy">
+            ConstatFlow is adapted to your current report template, phrasing, room order, and
+            recurring clauses. Your experts do not need to change the way reports are delivered.
           </p>
         </div>
-        <div class="proof-list">
-          <div>
-            <strong data-i18n="quality.proof1.title">Traceable input</strong>
-            <span data-i18n="quality.proof1.text">Every draft starts from the expert's real recording.</span>
-          </div>
-          <div>
-            <strong data-i18n="quality.proof2.title">Structured review</strong>
-            <span data-i18n="quality.proof2.text">An evaluation pass looks for omissions, contradictions and weak sections.</span>
-          </div>
-          <div>
-            <strong data-i18n="quality.proof3.title">Human approval</strong>
-            <span data-i18n="quality.proof3.text">Your team keeps final control before the report goes to the client.</span>
-          </div>
+        <div class="feature-list">
+          <div data-i18n="template.item1">Existing Word templates supported</div>
+          <div data-i18n="template.item2">Firm-specific vocabulary</div>
+          <div data-i18n="template.item3">French and Dutch workflows possible</div>
+          <div data-i18n="template.item4">Reusable clauses and standard remarks</div>
+          <div data-i18n="template.item5">Output designed for your current review process</div>
         </div>
       </section>
 
-      <section id="pilot" class="demo-section">
+      <section class="content-band trust-section">
         <div class="section-heading">
-          <p class="eyebrow" data-i18n="pilot.eyebrow">Pilot offer</p>
-          <h2 data-i18n="pilot.title">Send us one recording and one example template.</h2>
+          <p class="eyebrow" data-i18n="trust.eyebrow">Control</p>
+          <h2 data-i18n="trust.title">Designed for professional inspection workflows</h2>
         </div>
+        <div class="trust-grid">
+          <div data-i18n="trust.item1">Human review before final delivery</div>
+          <div data-i18n="trust.item2">No automatic final legal conclusions</div>
+          <div data-i18n="trust.item3">Data retention controls</div>
+          <div data-i18n="trust.item4">Private file storage</div>
+          <div data-i18n="trust.item5">Access control by firm/user</div>
+          <div data-i18n="trust.item6">Optional anonymized pilot</div>
+          <div data-i18n="trust.item7">Source traceability for audit and correction</div>
+        </div>
+      </section>
 
-        <div class="pilot-layout">
-          <div class="pilot-card">
-            <strong data-i18n="pilot.send.title">What to send</strong>
-            <ol>
-              <li data-i18n="pilot.send.item1">An audio recording from a real visit</li>
-              <li data-i18n="pilot.send.item2">A previous report or document template</li>
-              <li data-i18n="pilot.send.item3">Any formatting rules your client expects</li>
-            </ol>
-          </div>
-          <div class="pilot-card accent-card">
-            <strong data-i18n="pilot.back.title">What you get back</strong>
-            <p data-i18n="pilot.back.text">
-              A completed sample document in your structure, ready for review, delivered within
-              2 hours during business hours.
-            </p>
-            <a id="pilot-mail-link" class="primary-action" href="mailto:contact@voice2doc.app?subject=Voice2Doc%20sample%20document%20request&body=Hi%2C%0A%0AWe%20would%20like%20to%20test%20Voice2Doc.%20We%20will%20send%3A%0A-%20One%20audio%20recording%0A-%20One%20example%20template%20or%20previous%20report%0A-%20Our%20formatting%20requirements%0A%0ACompany%3A%0AName%3A%0APhone%3A%0A" data-i18n="pilot.cta">Send sample by email</a>
-          </div>
+      <section id="pilot" class="pilot-section">
+        <div class="pilot-copy">
+          <p class="eyebrow" data-i18n="pilot.eyebrow">Pilot</p>
+          <h2 data-i18n="pilot.title">Test it on one real anonymized inspection</h2>
+          <p data-i18n="pilot.copy">
+            Send one anonymized MP3 recording and the final report that was produced from it. We
+            generate a comparison draft in your format so you can evaluate time saved, correction
+            effort, and report quality.
+          </p>
+          <a id="pilot-mail-link" class="primary-action" href="mailto:dimitri@voice2doc.app" data-i18n="pilot.cta">Test one anonymized inspection</a>
         </div>
+        <div class="pilot-card">
+          <strong data-i18n="pilot.cardTitle">What the pilot shows</strong>
+          <ul>
+            <li data-i18n="pilot.item1">No workflow change required</li>
+            <li data-i18n="pilot.item2">Use a past recording</li>
+            <li data-i18n="pilot.item3">Compare AI draft against final report</li>
+            <li data-i18n="pilot.item4">Identify time saved per report</li>
+            <li data-i18n="pilot.item5">Decide whether a paid pilot makes sense</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="faq" class="content-band faq-section">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="faq.eyebrow">FAQ</p>
+          <h2 data-i18n="faq.title">Common questions</h2>
+        </div>
+        <div class="faq-grid">
+          <details open>
+            <summary data-i18n="faq.q1">Does this fully replace human review?</summary>
+            <p data-i18n="faq.a1">No. ConstatFlow generates a structured draft and highlights uncertain items. A human reviewer validates the final report.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q2">Do we need to change our report template?</summary>
+            <p data-i18n="faq.a2">No. The system is adapted to your existing template.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q3">What if the audio is unclear?</summary>
+            <p data-i18n="faq.a3">Unclear passages are flagged. The reviewer can jump back to the relevant transcript or audio section.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q4">Can it support French and Dutch?</summary>
+            <p data-i18n="faq.a4">The workflow is designed for multilingual Belgian inspection processes. Language support is configured during onboarding.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q5">Can we test without sharing sensitive client data?</summary>
+            <p data-i18n="faq.a5">Yes. The first test can use an anonymized past recording and report.</p>
+          </details>
+          <details>
+            <summary data-i18n="faq.q6">What file do we receive?</summary>
+            <p data-i18n="faq.a6">The final output can be exported as an editable Word document and, if needed, as PDF.</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <h2 data-i18n="final.title">See how much report production time you can save</h2>
+        <p data-i18n="final.copy">
+          Test ConstatFlow with one anonymized inspection recording and compare the generated draft
+          with your current process.
+        </p>
+        <a class="primary-action" href="#pilot" data-i18n="final.cta">Test one anonymized inspection</a>
       </section>
     </main>
     <script src="app.js"></script>
