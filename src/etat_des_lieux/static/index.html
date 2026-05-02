@@ -9,8 +9,7 @@
   <body>
     <header class="topbar">
       <a class="brand" href="#top" aria-label="Voice2Doc home">
-        <span class="brand-mark">V2D</span>
-        <span class="brand-name">Voice2Doc</span>
+        <img src="voice2doc_logo_transparent.png" alt="Voice2Doc" />
       </a>
       <nav aria-label="Primary navigation">
         <a href="#workflow" data-i18n="nav.workflow">Workflow</a>
@@ -43,12 +42,33 @@
         <aside class="hero-panel" data-i18n-attr="aria-label:visual.aria" aria-label="Voice2Doc report workflow preview">
           <div class="flow-strip">
             <div class="flow-step">
-              <span class="icon microphone"></span>
+              <span class="audio-visual" aria-hidden="true">
+                <span class="file-badge">MP3</span>
+                <span class="waveform">
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                </span>
+              </span>
               <strong data-i18n="visual.step1">MP3 recording</strong>
             </div>
             <span class="flow-arrow">-></span>
             <div class="flow-step">
-              <span class="icon extract"></span>
+              <span class="extract-visual" aria-hidden="true">
+                <span class="raw-lines">
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                </span>
+                <span class="mini-arrow">-></span>
+                <span class="structured-lines">
+                  <i></i>
+                  <i></i>
+                  <i></i>
+                </span>
+              </span>
               <strong data-i18n="visual.step2">AI extraction</strong>
             </div>
             <span class="flow-arrow">-></span>

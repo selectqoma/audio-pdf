@@ -88,28 +88,14 @@ nav,
 }
 
 .brand {
-  gap: 10px;
+  display: block;
   text-decoration: none;
 }
 
-.brand-mark {
-  display: grid;
-  width: 46px;
-  height: 38px;
-  place-items: center;
-  border-radius: 8px;
-  color: #ffffff;
-  background: var(--blue);
-  font-size: 14px;
-  font-weight: 900;
-  letter-spacing: 0;
-}
-
-.brand-name {
-  color: var(--blue-dark);
-  font-size: 19px;
-  font-weight: 900;
-  letter-spacing: 0;
+.brand img {
+  display: block;
+  width: clamp(112px, 11vw, 150px);
+  height: auto;
 }
 
 nav {
@@ -285,10 +271,10 @@ li {
 
 .flow-step {
   flex: 1;
-  min-height: 78px;
+  min-height: 92px;
   flex-direction: column;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: #f8fafc;
@@ -298,6 +284,111 @@ li {
 
 .flow-arrow {
   color: var(--blue);
+  font-weight: 900;
+}
+
+.audio-visual,
+.extract-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.audio-visual {
+  gap: 9px;
+}
+
+.file-badge {
+  display: grid;
+  width: 38px;
+  height: 28px;
+  place-items: center;
+  border: 2px solid var(--blue);
+  border-radius: 6px;
+  color: var(--blue);
+  background: #ffffff;
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.waveform {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 30px;
+}
+
+.waveform i {
+  display: block;
+  width: 4px;
+  border-radius: 999px;
+  background: var(--blue);
+}
+
+.waveform i:nth-child(1),
+.waveform i:nth-child(5) {
+  height: 12px;
+  opacity: 0.55;
+}
+
+.waveform i:nth-child(2),
+.waveform i:nth-child(4) {
+  height: 22px;
+  opacity: 0.78;
+}
+
+.waveform i:nth-child(3) {
+  height: 30px;
+}
+
+.extract-visual {
+  gap: 8px;
+}
+
+.raw-lines,
+.structured-lines {
+  display: grid;
+  gap: 4px;
+  width: 30px;
+}
+
+.raw-lines i,
+.structured-lines i {
+  display: block;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--blue);
+}
+
+.raw-lines i:nth-child(1) {
+  width: 24px;
+}
+
+.raw-lines i:nth-child(2) {
+  width: 17px;
+  opacity: 0.7;
+}
+
+.raw-lines i:nth-child(3) {
+  width: 28px;
+  opacity: 0.48;
+}
+
+.structured-lines {
+  padding: 5px;
+  border: 2px solid var(--blue);
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.structured-lines i {
+  width: 16px;
+}
+
+.mini-arrow {
+  color: var(--blue);
+  font-size: 13px;
   font-weight: 900;
 }
 
