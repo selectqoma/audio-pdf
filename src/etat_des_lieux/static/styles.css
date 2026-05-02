@@ -94,12 +94,13 @@ nav,
 
 .brand-mark {
   display: grid;
-  width: 38px;
+  width: 46px;
   height: 38px;
   place-items: center;
   border-radius: 8px;
   color: #ffffff;
   background: var(--blue);
+  font-size: 14px;
   font-weight: 900;
   letter-spacing: 0;
 }
@@ -310,20 +311,40 @@ li {
 }
 
 .icon.microphone {
-  width: 18px;
-  border-radius: 10px;
+  width: 30px;
+  height: 32px;
+  border-radius: 4px;
 }
 
+.icon.microphone::before,
 .icon.microphone::after {
   content: "";
   position: absolute;
-  left: 50%;
-  bottom: -8px;
-  width: 18px;
-  height: 8px;
-  border-bottom: 2px solid var(--blue);
+}
+
+.icon.microphone::before {
+  right: -2px;
+  top: -2px;
+  width: 10px;
+  height: 10px;
   border-left: 2px solid var(--blue);
-  transform: translateX(-50%);
+  border-bottom: 2px solid var(--blue);
+  background: #f8fafc;
+}
+
+.icon.microphone::after {
+  left: 6px;
+  right: 6px;
+  top: 12px;
+  height: 8px;
+  border-top: 3px solid var(--blue);
+  border-bottom: 3px solid var(--blue);
+}
+
+.icon.extract {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
 }
 
 .icon.extract::before,
@@ -334,16 +355,20 @@ li {
 }
 
 .icon.extract::before {
-  inset: 6px;
+  left: 7px;
+  top: 8px;
+  width: 4px;
+  height: 4px;
   border-radius: 50%;
+  box-shadow: 0 6px 0 var(--blue), 0 12px 0 var(--blue);
 }
 
 .icon.extract::after {
-  right: -7px;
-  bottom: -3px;
-  width: 12px;
+  left: 14px;
+  top: 9px;
+  width: 10px;
   height: 2px;
-  transform: rotate(45deg);
+  box-shadow: 0 6px 0 var(--blue), 0 12px 0 var(--blue);
 }
 
 .icon.document {
