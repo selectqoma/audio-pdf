@@ -9,7 +9,7 @@ const translations = {
     "nav.pilot": "Pilot",
     "nav.faq": "FAQ",
     "hero.eyebrow": "For property inspection report teams",
-    "hero.title": "Generate états des lieux reports from inspection recordings",
+    "hero.title": "Generate property condition reports from inspection recordings",
     "hero.lead":
       "Upload an expert's MP3 recording and receive a structured draft report in your firm's own template, with uncertain items highlighted for review.",
     "hero.primary": "Test with one anonymized inspection",
@@ -18,7 +18,7 @@ const translations = {
     "visual.step1": "MP3 recording",
     "visual.step2": "AI extraction",
     "visual.step3": "Report template",
-    "visual.reportTitle": "État des lieux - draft",
+    "visual.reportTitle": "Condition report - draft",
     "visual.status": "4 items flagged",
     "visual.room": "Kitchen",
     "visual.roomText": "Wall near sink: humidity trace, paint blistering, verify extent.",
@@ -30,7 +30,7 @@ const translations = {
     "pain.eyebrow": "The bottleneck",
     "pain.title": "Report production should not depend on manual retyping",
     "pain.copy":
-      "Many firms still produce états des lieux by recording observations on-site, then sending the audio to an internal admin team, freelancer, or offshore provider to create the final report. This creates delays, corrections, inconsistent wording, and dependency on external availability.",
+      "Many firms still produce property condition reports by recording observations on-site, then sending the audio to an internal admin team, freelancer, or offshore provider to create the final report. This creates delays, corrections, inconsistent wording, and dependency on external availability.",
     "pain.item1": "MP3 recordings manually converted into reports",
     "pain.item2": "Long turnaround between inspection and final document",
     "pain.item3": "Repetitive formatting and copy-paste work",
