@@ -12,9 +12,9 @@
         <img src="voice2doc_logo_transparent.png" alt="Voice2Doc" />
       </a>
       <nav aria-label="Primary navigation">
+        <a href="#offer" data-i18n="nav.offer">Offer</a>
+        <a href="#review" data-i18n="nav.review">Proof</a>
         <a href="#workflow" data-i18n="nav.workflow">Workflow</a>
-        <a href="#review" data-i18n="nav.review">Niche-trained AI</a>
-        <a href="#pilot" data-i18n="nav.pilot">Pilot</a>
         <a href="#faq" data-i18n="nav.faq">FAQ</a>
       </nav>
       <div class="language-switcher" aria-label="Language">
@@ -30,12 +30,17 @@
           <p class="eyebrow" data-i18n="hero.eyebrow">For property inspection report teams</p>
           <h1 data-i18n="hero.title">From inspection audio to client-ready PDF</h1>
           <p class="lead" data-i18n="hero.lead">
-            Voice2Doc uses AI trained on property inspection reports to turn expert recordings into
-            final reports in your firm's own template.
+            Send one anonymized MP3 and one final report. Voice2Doc adapts to your niche, your
+            template, and your wording to reproduce reports ready to send.
           </p>
           <div class="hero-actions">
-            <a class="primary-action" href="#pilot" data-i18n="hero.primary">Test one recording</a>
-            <a class="secondary-action" href="#workflow" data-i18n="hero.secondary">See how it works</a>
+            <a class="primary-action" href="#pilot" data-i18n="hero.primary">Get the free comparison test</a>
+            <a class="secondary-action" href="#offer" data-i18n="hero.secondary">See the offer</a>
+          </div>
+          <div class="proof-strip" aria-label="Offer highlights">
+            <span data-i18n="hero.proof1">Trained on inspection-report data</span>
+            <span data-i18n="hero.proof2">No workflow change</span>
+            <span data-i18n="hero.proof3">Final Word/PDF output</span>
           </div>
         </div>
 
@@ -113,6 +118,35 @@
         </aside>
       </section>
 
+      <section id="offer" class="content-band offer-section">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="offer.eyebrow">The offer</p>
+          <h2 data-i18n="offer.title">Free comparison test on one past inspection</h2>
+          <p data-i18n="offer.copy">
+            Give us an anonymized recording and the final PDF your client received. We generate the
+            same report flow in your format, so you can compare output quality before changing anything.
+          </p>
+        </div>
+        <div class="offer-grid">
+          <div>
+            <strong data-i18n="offer.card1.title">You send</strong>
+            <span data-i18n="offer.card1.text">One MP3, one final PDF, and your Word template if available.</span>
+          </div>
+          <div>
+            <strong data-i18n="offer.card2.title">We build</strong>
+            <span data-i18n="offer.card2.text">A niche-adapted generation flow for your exact report structure.</span>
+          </div>
+          <div>
+            <strong data-i18n="offer.card3.title">You receive</strong>
+            <span data-i18n="offer.card3.text">A client-ready Word/PDF report to compare against the original.</span>
+          </div>
+          <div>
+            <strong data-i18n="offer.card4.title">You decide</strong>
+            <span data-i18n="offer.card4.text">If it is not close enough to your standard, there is nothing to roll out.</span>
+          </div>
+        </div>
+      </section>
+
       <section class="content-band pain-section">
         <div class="section-heading">
           <p class="eyebrow" data-i18n="pain.eyebrow">The bottleneck</p>
@@ -134,10 +168,10 @@
       <section class="split-section solution-section">
         <div>
           <p class="eyebrow" data-i18n="solution.eyebrow">Structured generation</p>
-          <h2 data-i18n="solution.title">Built for inspection reports, not generic transcription</h2>
+          <h2 data-i18n="solution.title">The mechanism: niche-trained report generation</h2>
           <p data-i18n="solution.copy">
-            Voice2Doc is trained on real recordings and final reports from this niche, so it learns
-            room structure, report phrasing, recurring clauses, and non-linear expert notes.
+            Generic transcription creates text. Voice2Doc uses inspection-report data to learn how
+            final reports are actually built: room order, clauses, damages, and late additions.
           </p>
         </div>
         <div class="feature-list">
@@ -233,13 +267,13 @@
 
       <section id="pilot" class="pilot-section">
         <div class="pilot-copy">
-          <p class="eyebrow" data-i18n="pilot.eyebrow">Pilot</p>
-          <h2 data-i18n="pilot.title">Test one recording against the final report</h2>
+          <p class="eyebrow" data-i18n="pilot.eyebrow">Risk reversal</p>
+          <h2 data-i18n="pilot.title">See the result before committing to a rollout</h2>
           <p data-i18n="pilot.copy">
-            Send one anonymized MP3 and the final PDF that was sent to the client. We reproduce the
-            report in your format so you can compare the result directly.
+            The first step is not a platform migration. It is one concrete comparison on your own
+            material: your audio, your final report, your template.
           </p>
-          <a id="pilot-mail-link" class="primary-action" href="mailto:dimitri@voice2doc.app" data-i18n="pilot.cta">Test one recording</a>
+          <a id="pilot-mail-link" class="primary-action" href="mailto:dimitri@voice2doc.app" data-i18n="pilot.cta">Request the free test</a>
         </div>
         <div class="pilot-card">
           <strong data-i18n="pilot.cardTitle">What the pilot shows</strong>
@@ -287,11 +321,12 @@
       </section>
 
       <section class="final-cta">
-        <h2 data-i18n="final.title">See if Voice2Doc can reproduce your final report</h2>
+        <h2 data-i18n="final.title">Send one old case. Judge the output.</h2>
         <p data-i18n="final.copy">
-          Send one anonymized recording and final PDF. We generate the same report flow in your format.
+          If Voice2Doc can reproduce your report quality from one recording, you have a clear path
+          to remove manual report production.
         </p>
-        <a class="primary-action" href="#pilot" data-i18n="final.cta">Test one recording</a>
+        <a class="primary-action" href="#pilot" data-i18n="final.cta">Request the free test</a>
       </section>
     </main>
     <script src="app.js"></script>
